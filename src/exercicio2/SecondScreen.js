@@ -21,7 +21,6 @@ export default class SecondScreen extends Component {
     const nota2 = document.getElementById('nota2')
 
     const media = (Number(nota1.value) + Number(nota2.value)) / 2
-    this.setState({media: media})
 
     let message = ""
     if(media < 3)
@@ -30,17 +29,18 @@ export default class SecondScreen extends Component {
     message = "Exame"
     else
     message = "Aprovado"
-    
-    this.setState({message: message})
-    
-    this.setState({total: this.state.total += 1 })
 
     if(message == "Aprovado")
     this.setState({totalApro: this.state.totalApro += 1})
     else if(message == "Reprovado")
     this.setState({totalRepro: this.state.totalRepro += 1})
 
-    this.setState({totalMedia: this.state.totalMedia += media})
+    this.setState({
+      media: media,
+      totalMedia: this.state.totalMedia += media,
+      message: message,
+      total: this.state.total += 1 
+    })
 
     nota1.value = ""
     nota2.value = ""

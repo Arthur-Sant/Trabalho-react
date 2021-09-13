@@ -2,6 +2,7 @@ import "./App.css";
 import FirstScreen from "./exercicio1/FirstScreen";
 import { Component } from "react";
 import SecondScreen from "./exercicio2/SecondScreen";
+import ThirdScreen from "./exercicio3/ThirdScreen";
 
 class App extends Component {
   constructor(props) {
@@ -39,7 +40,7 @@ class App extends Component {
         <br />
 
         <button className={'screenButton'} id="third" onClick={(e) => this.stateButton(e)}>Terceira tela</button>
-        {this.state.thirdScreen ? <FirstScreen /> : ""}
+        {this.state.thirdScreen ? <ThirdScreen /> : ""}
         <br />
 
         <button className={'screenButton'} id="fourth" onClick={(e) => this.stateButton(e)}>Quarta tela</button>
