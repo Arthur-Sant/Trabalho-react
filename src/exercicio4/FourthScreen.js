@@ -15,6 +15,7 @@ export default class FourthScreen extends Component {
   render(){
     return (
       <div>
+        <h3>Escreva para saber o total de palavras</h3>
         <input type="text" id="letras" onChange={(e) => this.change(e)}/>
         {this.state.letras ? (
           <ul>

@@ -41,6 +41,7 @@ export default class ThirdScreen extends Component {
   render(){
     return (
       <div>
+        <h3>Adicione os numeros para o calculo</h3>
         <Input id={'numbers'} padding={10} type={'number'}/>
         <button onClick={() => this.addNumber()}> Adicionar</button>
         <button onClick={() => this.calculate()} >Calcular</button>

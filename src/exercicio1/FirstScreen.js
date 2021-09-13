@@ -28,6 +28,7 @@ export default class FirstScreen extends Component {
 
     return (
       <div>
+        <h3>Formas do triangulo</h3>
       <Input id={'value1'} type={'number'} padding={10}/>
       <Input id={'value2'} type={'number'} padding={10}/>
       <Input id={'value3'} type={'number'} padding={10}/>

@@ -49,6 +49,7 @@ export default class SecondScreen extends Component {
   render(){
     return (
       <div className="second-screen">
+        <h3>Adicione a nota de cada aluno</h3>
         <Input id={'nota1'} type={'number'} padding={10}/>
         <Input id={'nota2'} type={'number'} padding={10}/>
         <button onClick={() => this.calculateNota()} >Calcular Nota</button>

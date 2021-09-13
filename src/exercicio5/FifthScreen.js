@@ -34,8 +34,10 @@ export default class FifthScreen extends Component{
   render(){
     return (
       <div>
+        <h3>Diferença entre sua data de nascimento e data de hoje</h3>
         <Input type={'date'} padding={10} id={'dataDeNascimento'} />
         <button onClick={() => this.calculate()}>Ver diferença</button>
+        <br/>
         <br/>
         <label>Diferença em: </label>
         {this.state.show ? (
