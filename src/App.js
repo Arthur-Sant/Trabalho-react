@@ -1,9 +1,10 @@
 import "./App.css";
-import FirstScreen from "./exercicio1/FirstScreen";
 import { Component } from "react";
+import FirstScreen from "./exercicio1/FirstScreen";
 import SecondScreen from "./exercicio2/SecondScreen";
 import ThirdScreen from "./exercicio3/ThirdScreen";
 import FourthScreen from "./exercicio4/FourthScreen";
+import FifthScreen from "./exercicio5/FifthScreen";
 
 class App extends Component {
   constructor(props) {
@@ -48,8 +49,8 @@ class App extends Component {
         {this.state.fourthScreen ? <FourthScreen /> : ""}
         <br />
 
-        <button className={'screenButton'} id="fifth" onClick={(e) => this.stateButton(e)}>Primeira tela</button>
-        {this.state.fifthScreen ? <FirstScreen /> : ""}
+        <button className={'screenButton'} id="fifth" onClick={(e) => this.stateButton(e)}>Quinta tela</button>
+        {this.state.fifthScreen ? <FifthScreen /> : ""}
       </div>
     );
   }
