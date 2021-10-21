@@ -1,4 +1,5 @@
-import Digimon from './pages/Digimon';
+import { AulaRedux } from './components';
+import { Digimon } from './pages'
 
 function App() {
   return (

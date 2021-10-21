@@ -8,24 +8,25 @@ export default class Digimon extends Component {
     this.state = {digimons: []}
   }
 
-  getDigimons(value = "") {
+  getDigimons() {
     (async() => {
-      const { data } = await api.get('/api/digimon')
-      const filterData = data.filter((digimon) => (
-        digimon.name.substring(0, value.length) == value
-      ));
+      const { setDigimons } = this.props;
 
-      this.setState({ digimons: filterData });
+      const { data } = await api.get('/api/digimon')
+
+      setDigimons(data)
+      this.setState({ digimons: data })
     })()  
   }
 
-  getData({target: {value}}){
-      let word = ""
-      if(value){
-        word = value[0].toLocaleUpperCase() + value.substring(1, value.length)
-      } 
+  getDigimonsByName(name) {
 
-      this.getDigimons(word);
+    const { fetchDigimons } = this.props; 
+    const filterData = fetchDigimons.filter((digimon) => (
+        digimon.name.toLowerCase().includes(name.toLowerCase())
+      ));
+
+    this.setState({ digimons: filterData });
   }
 
   componentDidMount(){
@@ -39,7 +40,7 @@ export default class Digimon extends Component {
           <input 
           type={'text'} 
           className="digimon-name-input" 
-          onChange={(e) => this.getData(e)}
+          onChange={(e) => this.getDigimonsByName(e.target.value)}
           placeholder="Digite o nome do digimon"/>
         </div>
         
