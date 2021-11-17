@@ -1,0 +1,6 @@
+.side-bar{
+  display: flex;
+  flex-direction: column;
+  box-shadow: 1px 0px 5px 3px gray;
+  height: 100vh;
+}

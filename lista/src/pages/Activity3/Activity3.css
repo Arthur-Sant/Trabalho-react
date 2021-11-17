@@ -1,0 +1,16 @@
+.container-activity3{
+  display: flex;
+  justify-content: center;
+}
+
+.main-activity3{
+  display: flex;
+  flex-direction: column;
+  line-height: 3;
+  margin-right: 140px;
+}
+
+.item-activity3{
+  display: flex;
+  align-items: center;
+}

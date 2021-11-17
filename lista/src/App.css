@@ -1,0 +1,13 @@
+*{
+  padding: 0;
+  margin: 0;
+  outline: none
+}
+
+.container{
+  display: flex;
+}
+
+.routes{
+  padding: 40px
+}

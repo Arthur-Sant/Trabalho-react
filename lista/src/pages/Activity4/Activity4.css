@@ -1,0 +1,12 @@
+.container-activity4{
+  display: flex;
+  flex-direction: column;
+}
+
+.container-activity4 input{
+  margin-bottom: 20px
+}
+
+.container-activity4 button{
+  margin-bottom: 20px
+}

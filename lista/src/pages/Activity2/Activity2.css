@@ -1,0 +1,5 @@
+.container-activity2{ 
+  display: flex;
+  flex-direction: column;
+  line-height: 4
+}
